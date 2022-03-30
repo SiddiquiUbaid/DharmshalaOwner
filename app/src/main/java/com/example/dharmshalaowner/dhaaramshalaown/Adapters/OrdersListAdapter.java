@@ -136,12 +136,16 @@ public class OrdersListAdapter extends RecyclerView.Adapter<OrdersListAdapter.Vi
         }
         else if(localDataSet.get(position).getPaymentType().equals("atHotel")){
             viewHolder.getImgPaymentStatus().setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_baseline_paid_24));
+            viewHolder.getImgPaymentStatus().setColorFilter(mContext.getResources().getColor(R.color.yellow));
+
+        }
+        else if(localDataSet.get(position).getPaymentType().equals("paid")){
+            viewHolder.getImgPaymentStatus().setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_baseline_paid_24));
             viewHolder.getImgPaymentStatus().setColorFilter(mContext.getResources().getColor(R.color.green));
 
         }
         else{
-            viewHolder.getImgPaymentStatus().setImageDrawable(mContext.getResources().getDrawable(R.drawable.add));
-
+            viewHolder.getImgPaymentStatus().setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_baseline_paid_24));
         }
 
 

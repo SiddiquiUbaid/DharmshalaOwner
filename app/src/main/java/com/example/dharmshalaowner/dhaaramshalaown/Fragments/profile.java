@@ -1,6 +1,7 @@
 package com.example.dharmshalaowner.dhaaramshalaown.Fragments;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -396,6 +397,16 @@ public class profile extends Fragment implements NavigationView.OnNavigationItem
         }
 
 
+    public void logOutUser(){
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(getActivity(),LoginActivity.class);
+        startActivity(intent);
+        getActivity().finishAffinity();
+
+
+    }
+
+
 
 
 
@@ -478,8 +489,34 @@ public class profile extends Fragment implements NavigationView.OnNavigationItem
                 break;
 
             case R.id.nav_logout:
-                Intent intent = new Intent(getActivity(),LoginActivity.class);
-                startActivity(intent);
+
+
+                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getActivity());
+                builder.setMessage("Are you sure to logout?");
+                builder.setTitle("Log out");
+
+                builder.setCancelable(false);
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        logOutUser();
+
+
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                    }
+                });
+
+                android.app.AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
                 break;
 
             case R.id.booking_orders:
