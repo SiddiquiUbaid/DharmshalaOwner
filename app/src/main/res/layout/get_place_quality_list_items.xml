@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:id="@+id/id_recyclerView_place_quality_items_ui"
+    android:orientation="vertical"
+    >
+<!--    android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_quality_item"
+        android:text="Sample quality"
+        android:textSize="15sp"
+        android:padding="2dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+
+</LinearLayout>

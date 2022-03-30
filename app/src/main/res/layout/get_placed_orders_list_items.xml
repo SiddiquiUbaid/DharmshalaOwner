@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="5dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="40dp"
+        app:cardMaxElevation="40dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"/>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="919892327394"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Nights"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"/>
+
+                <TextView
+                    android:id="@+id/rooms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Rooms"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/bookingStatus"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="new"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textColor="@color/teal_700"-->
+<!--                    android:layout_marginLeft="65dp"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:paddingLeft="10dp"-->
+
+<!--                    />-->
+
+                <ImageView
+                    android:id="@+id/imgPaymentSatus"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="100dp"
+                     />
+
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5000"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/orderGlimpseLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/confirmOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Open"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:padding="15dp"
+                />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/deleteOrder"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Delete"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/pink"-->
+<!--                android:layout_marginLeft="100dp"-->
+<!--                android:padding="15dp"-->
+<!--                />-->
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

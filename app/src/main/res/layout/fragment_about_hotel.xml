@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_layout_background"
+    app:barrierMargin="60dp"
+    tools:context=".dhaaramshalaown.Fragments.Hotel_name">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/id_descPlaceOverview"
+        android:paddingHorizontal="15dp"
+        android:text="@string/checkOutText"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/id_descPlaceOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/id_mainRecyclerViewabouthotel"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:paddingHorizontal="15dp"
+        android:text="Your hotel details as submited by you, you can edit them below."
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/id_mainRecyclerViewabouthotel"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/layout_background"
+        android:paddingTop="15dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayoutForHotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/white">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutForHotelName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:padding="10dp"
+                        android:text="HOTEL NAME:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/txtHotelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_below="@id/cardLayoutForHotelName"
+                android:layout_marginTop="8dp"
+                android:background="@color/light_Grey" />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayoutForHotelRent"
+                android:layout_below="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/white">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForHotelRent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:padding="10dp"
+                    android:text="HOTEL RENT:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txtRent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/view2"
+                android:layout_marginTop="8dp"
+                android:layout_height="6dp"
+                android:layout_below="@id/cardLayoutForHotelRent"
+                android:background="@color/light_Grey"/>
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForPlaceDescription"
+                android:layout_below="@+id/view2"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:text="PLACE DESCRIPTION:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recylerViewForPlaceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@+id/txtRent"
+                 />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/view3"
+                android:layout_marginTop="8dp"
+                android:layout_height="6dp"
+                android:layout_below="@id/linearLayoutForPlaceDescription"
+                android:background="@color/light_Grey"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForPlaceOffers"
+                android:layout_below="@+id/view3"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:text="PLACE OFFERS:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewForPlaceOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                     />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/view4"
+                android:layout_marginTop="8dp"
+                android:layout_height="6dp"
+                android:layout_below="@id/linearLayoutForPlaceOffers"
+                android:background="@color/light_Grey"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayoutForPlaceQualities"
+                android:layout_below="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForPlaceQualities"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="PLACE KEY FACTORS:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewForPlaceQualities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    />
+
+
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/view5"
+                android:layout_marginTop="8dp"
+                android:layout_height="6dp"
+                android:layout_below="@id/cardLayoutForPlaceQualities"
+                android:background="@color/light_Grey"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayoutForPlaceSecurity"
+                android:layout_below="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForPlaceSecurity"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="PLACE SECURITY:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewForPlaceSecurity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                     />
+
+
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/view6"
+                android:layout_marginTop="8dp"
+                android:layout_height="6dp"
+                android:layout_below="@id/cardLayoutForPlaceSecurity"
+                android:background="@color/light_Grey"/>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayoutForPlaceCapacity"
+                android:layout_below="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForPlaceCapacity"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="6dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:text="PLACE CAPACITY:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtGuests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                android:textColor="#0F0422"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                 />
+
+            <TextView
+                android:id="@+id/txtGuestBeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginVertical="5dp"
+                android:text="TextView"
+                android:textColor="#0F0422"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                 />
+
+            <TextView
+                android:id="@+id/txtGuestBedrooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginVertical="5dp"
+                android:text="TextView"
+                android:textColor="#0F0422"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                 />
+
+            <TextView
+                android:id="@+id/txtGuestBathrooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginVertical="5dp"
+                android:text="TextView"
+                android:textColor="#0F0422"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                 />
+
+            <TextView
+                android:id="@+id/txtGuestPrivateBathroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginVertical="5dp"
+                android:text="TextView"
+                android:textColor="#0F0422"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                 />
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/view7"
+                android:layout_marginTop="8dp"
+                android:layout_height="6dp"
+                android:layout_below="@id/cardLayoutForPlaceCapacity"
+                android:background="@color/light_Grey"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linearImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view7"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="PLACE IMAGES:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/light_Grey">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/light_Grey">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/light_Grey">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/light_Grey">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp" />
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/light_Grey">
+
+
+                    <ImageView
+                    android:id="@+id/image5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/txtEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:drawableEnd="@drawable/ic_baseline_edit"
+        android:drawableTint="@color/black"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/id_dataSavingProgressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/layout_background"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

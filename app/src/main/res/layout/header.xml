@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="bottom"
+    android:background="@drawable/main_layout_background"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_dlogo"
+        android:gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/Dharmshala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dharmshala"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/img"
+        android:padding="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="www.Dharmshala.com"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/Dharmshala"
+        android:padding="2dp"/>
+
+</RelativeLayout>
